@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+{% block contactactive %}active{% endblock contactactive %}
+{% block body %}
+
+<div class="container">
+  <div class="section-title">
+    <div class="contact-header my-5" align="center">
+      <h2><b>Contact Us</b></h2>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-5 d-flex align-items-stretch">
+      <div class="info">
+        {% comment %} <h4 align="center"><strong>Click Club</strong></h4><br> {% endcomment %}
+        <div class="address">
+          
+          <h4><i class="bi bi-geo-alt-fill"></i> Location:</h4>
+          <p>NIT Raipur, Great Eastern Road, Amanaka, Raipur, Chhattisgarh, India, IN 492010 </p>
+        </div>
+        <div class="email">
+          
+          <h4><i class="bi bi-envelope-fill"></i> Email:</h4>
+          <p>clickclub@nitrr.ac.in</p>
+        </div>
+        <p>
+          <!-- Facebook -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/clickclubnitrr/" role="button"
+        data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/clickclubnitrr/" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="mailto:clickclub@nitrr.ac.in" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-google"></i></a>
+
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <form method = "post" action="mailto:clickclub@nitrr.ac.in" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"><i class="fa fa-paper-plane m-2" aria-hidden="true"></i>Send Message</button><br>
+      </form>
+      <hr> 
+      <a class="btn btn-primary" href="/logout" role="button">Logout</a>
+    </div>
+  </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Calendar{% endblock title %}
+{% block calendaractive %}active{% endblock calendaractive %}
+{% block body %}
+<div class="py-4">
+  <div class="container">
+    <div class=" text-center d-flex justify-content-center" >
+      <div class="align-items-center">
+        <h2 class="py-3">CALENDAR</h2>
+        <p>Every year, the club publishes a calendar with a different theme featuring the photographs taken by the members of the club.<br>
+          This year's theme for the calendar: Minimal Photography</p>
+          <h3 class="py-3" >Minimal Photography</h3>
+          <img src="/media/Calendar/0.webp" alt="January">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="calendar" style="width:99vw; overflow:hidden">
+  <div class="container-fluid" >
+      <div class="container-fluid d-flex justify-content-center">
+          <div class="row">
+            <style>
+              img {
+                width: 25%;
+                padding: 4px 4px;
+              }
+              
+             /* Responsive layout - makes a two column-layout instead of four columns */
+              @media screen and (max-width: 992px) {
+                img {
+                  width: 40%;
+                }
+              }
+              
+              /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+              @media screen and (max-width: 768px) {
+                img {
+                 width: 80%;
+                }
+              }
+            </style>
+            <div class="text-center"> 
+              <img src="/media/Calendar/1.webp" alt="January">
+              <img src="/media/Calendar/2.webp" alt="February">
+              <img src="/media/Calendar/3.webp" alt="March">
+              <img src="/media/Calendar/4.webp" alt="April">
+              <img src="/media/Calendar/5.webp" alt="May">
+              <img src="/media/Calendar/6.webp" alt="June">
+              <img src="/media/Calendar/7.webp" alt="July">
+              <img src="/media/Calendar/8.webp" alt="August">
+              <img src="/media/Calendar/9.webp" alt="September">
+              <img src="/media/Calendar/10.webp" alt="October">
+              <img src="/media/Calendar/11.webp" alt="November">
+              <img src="/media/Calendar/12.webp" alt="December">
+            </div>   
+            <div class="text-center m-3"> 
+              <a class="btn btn-primary" href="/media/Calendar2022.pdf" download role="button"><i class="bi bi-download"></i> Download Calendar</a>
+            </div>   
+          </div>   
+      </div>
+  </div>
+</div>
+
+{% endblock body %}

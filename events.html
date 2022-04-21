@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock title %}
+{% block eventsactive %}active{% endblock eventsactive %}
+{% block body %}
+<style>
+    @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.event {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+  text-align:center;
+}
+
+.event h1,
+.event h2,
+.event h3,
+.event h4,
+.event h5,
+.event h6 {
+  color: #3e4555;
+}
+
+.event .font-weight-medium {
+  font-weight: 500;
+}
+
+.event .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.event .subtitle {
+  color: #8d97ad;
+  line-height: 24px;
+}
+
+.event .text-themecolor {
+  color: #316ce8;
+}
+
+.event h5 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.event a.link {
+  color: #3e4555;
+}
+
+.event a.link:hover {
+  color: #316ce8;
+}
+
+.event .on-hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.event .on-hover:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.event .date-pos {
+  right: 10px;
+  top: 10px;
+}
+
+.event .date-pos span {
+  font-size: 30px;
+  line-height: 30px;
+}
+.event .bg-info-gradiant {
+    background: #188ef4;
+    background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+    background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+    background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+    background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+}
+#clock-b{
+    font-weight: normal;
+}
+</style>
+<script>
+    var countDownDate = new Date("Mar 30, 2022 10:00:00").getTime();
+    var countdownfunction = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  document.getElementById("clock-b").innerHTML =
+  "<div class='col'>"+days+"<br><p>Days</p></div><div class='col'>"+hours+"<br><p>Hrs</p></div><div class='col'>"+minutes+"<br><p>Min</p></div><div class='col'>"+seconds+"<br><p>Sec</p></div>";
+  
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("clock-b").innerHTML = "LAUNCHED";
+  }
+}, 1000);
+</script>
+<div class="event py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h3 class="my-3">Upcoming Events</h3>
+                <h6 class="subtitle font-weight-normal">Below are some events coming soon. Do join us!</h6>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow shadow">
+                    <a href="events/pixellane2022"><img class="card-img-top" src="/media/events/Pixel Lane.jpeg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Mar<span class="d-block">30</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/pixellane2022" class="text-decoration-none link">Pixel Lane 2022</a></h5>
+                    <p class="mt-3">Click Club's Annual Photo Exhibition</p>
+                    <div class="container text-center">
+                        <a href="events/pixellane2022" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                    <div id="clock-b" class="countdown-circles d-flex flex-wrap justify-content-center pt-4" style="color:#000"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="event">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h3 class="my-3">Past Events</h3>
+                <h6 class="subtitle font-weight-normal">Missed an event ? Don't worry, Have a look below and tap for more details.</h6>
+            </div>
+        </div>
+        <h4 class="my-3">2022</h4>
+        <div class="row mt-4">
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/annualworkshop"><img class="card-img-top" src="/media/events/Annual Photography Workshop 2022.webp" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">27</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/annualworkshop" class="text-decoration-none link">Annual Photography Workshop</a></h5>
+                    <p class="mt-3 px-2">{{ "Description"|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/annualworkshop" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/annualworkshop2"><img class="card-img-top" src="/media/events/Annual Photography Workshop(2) 2022.webp" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">26</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/annualworkshop2" class="text-decoration-none link">Annual Photography Workshop</a></h5>
+                    <p class="mt-3 px-2">{{ "Description"|truncatechars:80}}</p>
+                    <div class="container text-center">
+                    <a href="events/annualworkshop2" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/momentinmoment"><img class="card-img-top" src="/media/events/A Moment in Movement 2022.webp" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">7-12</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/momentinmoment" class="text-decoration-none link">A Moment in Moment</a></h5>
+                    <p class="mt-3 px-2">{{ "Description"|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/momentinmoment" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="calendar"><img class="card-img-top" src="/media/events/Calendar 2022.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Jan<span class="d-block">20</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="calendar" class="text-decoration-none link">E-Calendar Release</a></h5>
+                    <p class="mt-3">E-Calendar for the session 2022-2023</p>
+                    <div class="container text-center">
+                        <a href="calendar" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="my-3">2021</h4>
+        <div class="row mt-4">
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/thinkclicktical"><img class="card-img-top" src="/media/events/Think click tical.webp" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23-24</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/thinkclicktical" class="text-decoration-none link">Think Click-Tical</a></h5>
+                    <p class="mt-3 px-2">{{ "A photography quiz by the name of Think Click-tical was conducted on 23rd October (Round 1) and 24th October (Round 2) on the platform Dare2Compete. Winners were promised prizes worth Rs. 3000"|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/thinkclicktical" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/frameoftones"><img class="card-img-top" src="/media/events/Frame of tones.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Sep<span class="d-block">20</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/frameoftones" class="text-decoration-none link">Frame of Tones</a></h5>
+                    <p class="mt-3 px-2">{{ "A free editing workshop which covered the topics of basic photo editing, color correction, skin retouching techniques and mobile software for editing was held on Zoom for a time duration of 2 hours. "|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/frameoftones" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/snaptrip"><img class="card-img-top" src="/media/events/Snap Trip.jpeg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Mar<span class="d-block">4</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/snaptrip" class="text-decoration-none link">Snap Trip</a></h5>
+                    <p class="mt-3 px-2">{{ "Photography competition called Snap Trip on the genre of travel photography held through online mode took place on 4th March on the platform Dare2Compete. The winners were awarded with prizes and their entries were shown on the Instagram page."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/snaptrip" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/annualworkshop2021"><img class="card-img-top" src="/media/events/Annual Photography Workshop 2021.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">13-14</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/annualworkshop2021" class="text-decoration-none link"> Annual Photography Workshop</a></h5>
+                    <p class="mt-3 px-2">{{ "The 2 day Annual Photography Workshop by click, which was conducted in online mode for the year 2020 , was held on 13th and 14th February wherein knowledge about topics like basic camera handling, rules and composition and photo editing were imparted. It included a session from the guest speaker Rahul Ghanekar on DSLR and mobile Photography."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/annualworkshop2021" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="my-3">2020</h4>
+        <div class="row mt-4">
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/portraitphotography"><img class="card-img-top" src="/media/events/Portrait Photography.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Dec<span class="d-block">27</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/portraitphotography" class="text-decoration-none link">Portrait Photography</a></h5>
+                    <p class="mt-3 px-2">{{ "Guest Speaker Rishab Joshi was invited to conduct a photography workshop on portrait photography on 27th December 2020 via Google Meet. The session included tips on filmmaking, live QnA and knowledge about inception to execution with live photo edit workflow."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/portraitphotography" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/alumnus"><img class="card-img-top" src="/media/events/Alumnus session 2.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Dec<span class="d-block">9</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/alumnus" class="text-decoration-none link">Alumnus</a></h5>
+                    <p class="mt-3 px-2">{{ "Description"|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/alumnus" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/clickowali"><img class="card-img-top" src="/media/events/Click-O-Wali Diwali.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Nov<span class="d-block">19</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/clickowali" class="text-decoration-none link">Click-O-Wali Diwali</a></h5>
+                    <p class="mt-3 px-2">{{ "Photography contest on the theme of diwali lights was conducted on 19th November 2020. Judging criteria was based on composition, story and overall impact. The winners were given prizes which included camera accessories. "|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/clickowali" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/learnwithclick"><img class="card-img-top" src="/media/events/Learn with Click session 1.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Nov<span class="d-block">7</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/learnwithclick" class="text-decoration-none link">Learn with Click session 1</a></h5>
+                    <p class="mt-3 px-2">{{ "Learn with Click , a series of sessions taken by the members of the club , was started on 7th November. For the first session of the series , topics like photo editing, basics of photography, tone curve, HSL, editing tricks and hacks were covered. The platform chosen for the conduction was google meet."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/learnwithclick" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/webinar"><img class="card-img-top" src="/media/events/WEBINAR ALERT.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">31</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/webinar" class="text-decoration-none link">Webinar</a></h5>
+                    <p class="mt-3 px-2">{{ "A webinar on the platform of Google Meet was conducted by the club on 31st October wherein sessions on Nature, Architectural, Travel photography was given by the guest speaker Sachin Chauhan. "|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/webinar" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/kuchcreativecorona"><img class="card-img-top" src="/media/events/KUCH CREATIVE CORONA.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">25</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/kuchcreativecorona" class="text-decoration-none link">KUCH CREATIVE CORONA</a></h5>
+                    <p class="mt-3 px-2">{{ "Online photography contest was held during the lockdown which encouraged participants to click photos at home and submit them. The contest started on 25th April and the last date of participation was till lockdown."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/kuchcreativecorona" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+                <div class="card border-0 mb-4 shadow">
+                    <a href="events/whatthefood"><img class="card-img-top" src="/media/events/WHAT THE FOOD.jpg" alt="event"></a>
+                    <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Feb<span class="d-block">21</span></div>
+                    <h5 class="font-weight-medium mt-3"><a href="events/whatthefood" class="text-decoration-none link">WHAT THE FOOD</a></h5>
+                    <p class="mt-3 px-2">{{ "A food photography contest was conducted by click club for which the last date of submission of entries was 21st February 2020. Winners received prizes worth ₹1000."|truncatechars:80}}</p>
+                    <div class="container text-center">
+                        <a href="events/whatthefood" role="button" class="btn btn-primary text-decoration-none linking text-white m-2">Tap for details</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+<!--
+<div class="container-fluid my-3">
+    <div class="container">
+        <div class="card">
+        <div class="row p-3">
+            <div class="col-3" style="overflow:hidden;">
+                <img src="/static/3.jpg" style="width: calc(100% + 1vw + 1vh); height: calc(100% + 1vw + 1vh); object-fit:cover;" class="rounded float-left" alt="..." />
+            </div>
+            <div class="col-8 px-5">
+                <h2 class="card-title py-3" style="font-size: min(22px,calc(40% + 1vw + 1vh));">Pixel Lane 2022</h2>
+                <p style="font-size: min(16px,calc(25% + 1vw + 1vh));">Click Club's Annual Photo Exhibition<br><a href="events/pixellane2022">Tap for details</a></p>
+            </div>
+            <a href="events/pixellane2022" class="stretched-link"></a>
+        </div>
+        </div>
+    </div>
+</div>
+-->
+{% endblock body %}
