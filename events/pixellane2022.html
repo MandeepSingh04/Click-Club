@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Spartan" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
 
-  <title>Calendar | Click Club</title>
+  <title>Pixel Lane 2022 | Click Club</title>
 </head>
 <body style="background-color:#f7f7f7">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -37,7 +37,7 @@
             </div>
             <div class="nav-item px-1">
               <div class="row">
-                <a class="nav-link text-center mx-3 " href="./events.html"><i class="bi bi-camera"></i> Events</a>
+                <a class="nav-link text-center mx-3 active" href="./events.html"><i class="bi bi-camera"></i> Events</a>
               </div>
             </div>
             <div class="nav-item px-1">
@@ -47,7 +47,7 @@
             </div>
             <div class="nav-item px-1">
               <div class="row">
-                <a class="nav-link text-center mx-3 active" href="./calendar.html"><i class="bi bi-calendar3"></i> Calendar</a>
+                <a class="nav-link text-center mx-3" href="./calendar.html"><i class="bi bi-calendar3"></i> Calendar</a>
               </div>
             </div>
             <div class="nav-item px-1">
@@ -76,64 +76,132 @@
       </div>
     </div>
   </nav>
-<div class="py-4">
-  <div class="container">
-    <div class=" text-center d-flex justify-content-center" >
-      <div class="align-items-center">
-        <h2 class="py-3">CALENDAR</h2>
-        <p>Every year, the club publishes a calendar with a different theme featuring the photographs taken by the members of the club.<br>
-          This year's theme for the calendar: Minimal Photography</p>
-          <h3 class="py-3" >Minimal Photography</h3>
-          <img src="media/Calendar/0.webp" alt="January">
+<style>
+  .thumb {
+    flex: 33%;
+    width: 33vw;
+    padding: 0 0px;
+  }
+  
+ /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 992px) {
+    .thumb {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+    .thumb {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  img{ max-width:100%;}
+
+  .gallery_box .thumb{height:350px ; display:indivne-block; float: left; text-adivgn: center; overflow: hidden;    position: relative;}
+  .gallery_box{ padding:0;display: flow-root;}
+  
+  .gallery_box .thumb:hover img {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+  .gallery_box .thumb img{-webkit-transition: transform 0.5s ease;
+      -o-transition: transform 0.5s ease;
+      transition: transform 0.5s ease;}
+
+  .gallery_box .thumb:nth-child(odd) .box_data{ background:rgba(0,0,0,0.17) }
+  .gallery_box .thumb:nth-child(even) .box_data{ background:rgba(0,44,255,0.27) }
+  .gallery_box .box_data{ position:absolute; top: 0; left: 0; right:0; bottom:0; color:#fff;}
+  .gallery_box .box_data span{ position:absolute; top: 50%; transform: translateY(-50%); left:0 ; right:0; font-size:24px;}
+  .gallery_box .thumb:hover .box_data{ background:rgba(255,0,39,0.55)}
+</style>
+<h1 class="text-center p-5">Pixel Lane 2022</h1>
+
+<div class="gallery_box">
+  <div class="container-fluid d-flex justify-content-center">
+    <div class="row">
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Abstract</span>
+        </div></a>
       </div>
-    </div>
-  </div>
-</div>
-<div class="calendar" style="width:99vw; overflow:hidden">
-  <div class="container-fluid" >
-      <div class="container-fluid d-flex justify-content-center">
-          <div class="row">
-            <style>
-              img {
-                width: 25%;
-                padding: 4px 4px;
-              }
-              
-             /* Responsive layout - makes a two column-layout instead of four columns */
-              @media screen and (max-width: 992px) {
-                img {
-                  width: 40%;
-                }
-              }
-              
-              /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-              @media screen and (max-width: 768px) {
-                img {
-                 width: 80%;
-                }
-              }
-            </style>
-            <div class="text-center"> 
-              <img src="media/Calendar/1.webp" alt="January">
-              <img src="media/Calendar/2.webp" alt="February">
-              <img src="media/Calendar/3.webp" alt="March">
-              <img src="media/Calendar/4.webp" alt="April">
-              <img src="media/Calendar/5.webp" alt="May">
-              <img src="media/Calendar/6.webp" alt="June">
-              <img src="media/Calendar/7.webp" alt="July">
-              <img src="media/Calendar/8.webp" alt="August">
-              <img src="media/Calendar/9.webp" alt="September">
-              <img src="media/Calendar/10.webp" alt="October">
-              <img src="media/Calendar/11.webp" alt="November">
-              <img src="media/Calendar/12.webp" alt="December">
-            </div>   
-            <div class="text-center m-3"> 
-              <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="media/Calendar2022.pdf" download role="button"><i class="bi bi-download"></i> Download Calendar</a>
-            </div>   
-          </div>   
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Architecture</span>
+        </div></a>
       </div>
-  </div>
+      <div class="thumb col-4">
+        <a href="pixellane2022/landscape"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Landscape</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Lifestyle</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Long Exposure</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Macro</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Monochrome</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Portrait</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Still Life</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Street</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Travel</span>
+        </div></a>
+      </div>
+      <div class="thumb col-4">
+        <a href="#0"><img src="/media/wall4.jpeg">
+        <div class="box_data text-center">
+          <span>Wildlife</span>
+        </div></a>
+      </div>
+    </div>	
+  </div>	
 </div>
+
+
 <footer id="footer" class="mt-3">
   <div class="footer-top py-3" style="background-color: #181818; color:#B8B8B8; font-size:14px;">
     <div class="container">

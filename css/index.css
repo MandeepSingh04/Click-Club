@@ -1,0 +1,122 @@
+a,h1,h2,h3,h4,h5{
+    font-family:Oswald;
+  }
+  p{
+    font-family:Spartan;
+  }
+  .nav-link {
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    color: #fff;
+    border-bottom: 4px solid transparent;
+  }
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #fff;
+    border-bottom: 4px solid #FF6633;
+  }
+  .navbar-nav .active {
+    border-bottom: 4px solid #FF6633;
+  }
+  #navbar {
+    overflow: hidden;
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100vw;
+    top: 0; /* At the top */
+    z-index: 99;
+  }
+  .nav-active {
+    background-color: #212529;
+  }
+
+  /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
+
+    .carousel-item:nth-child(2) {
+      background-image: url('../media/w1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-item:nth-child(3) {
+      background-image: url('../media/w3.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-item:nth-child(4) {
+      background-image: url('../media/w2.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
+      }
+    }
+    .about{
+      color:#000;
+    }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 992px) {
+      .about{
+        color:#fff;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 768px) {
+      .about{
+        color:#fff;
+      }
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .separator::before,
+    .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #000;
+    }
+    
+    .separator:not(:empty)::before {
+      margin-right: .25em;
+    }
+    
+    .separator:not(:empty)::after {
+      margin-left: .25em;
+    }
+
+    .more {
+        flex: 33%;
+        width: 33vw;
+        padding: 20px;
+      }
+      
+      @media screen and (max-width: 992px) {
+        .more {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+      
+      @media screen and (max-width: 768px) {
+        .more {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }

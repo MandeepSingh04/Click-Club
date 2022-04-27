@@ -1,0 +1,21 @@
+a,h1,h2,h3,h4,h5{
+    font-family:Oswald;
+  }
+  p{
+    font-family:Spartan;
+  }
+  .nav-link {
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    color: #fff;
+    border-bottom: 4px solid transparent;
+  }
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #fff;
+    border-bottom: 4px solid #FF6633;
+  }
+  .navbar-nav .active {
+    border-bottom: 4px solid #FF6633;
+  }
+  body{
+    background-color:#f7f7f7;
+}
