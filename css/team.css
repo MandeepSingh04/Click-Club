@@ -34,7 +34,9 @@
 .linkedin {
     color: #0077b5;
 }
-
+.link {
+    color: #1d52c5;
+}
 .team ul li a i {
 padding-right: 15px;
 -webkit-transition: 0.1s ease-in;
