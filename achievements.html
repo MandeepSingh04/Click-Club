@@ -13,420 +13,203 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Spartan" rel="stylesheet">
-  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/base.css">
+    <!-- Vendor CSS Files -->
+
+  <link rel="stylesheet" href="css/achievement.css">
 
   <title>Achievements | Click Club</title>
 </head>
 <body style="background-color:#f7f7f7">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid mx-5">
-      <a class="navbar-brand " href="/" id="logo">
-        <img src="static/Click White Logo.webp" style="height:100px; width:100px;" alt="logo" />        
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ml-auto mb-2 mx-5 mb-lg-0">
-          <div class="navbar-nav container-fluid d-flex justify-content-center">
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" aria-current="page" href="./index.html"><i class="bi bi-house-door"></i> Home</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./events.html"><i class="bi bi-camera"></i> Events</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./activities.html"><i class="bi bi-image"></i> Activities</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./campus.html"><i class="bi bi-building"></i> Campus</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./learn_with_click.html"><i class="bi bi-camera2"></i> Learn With Click</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./calendar.html"><i class="bi bi-calendar3"></i> Calendar</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3 active" href="./achievements.html"><i class="bi bi-trophy"></i> Achievements</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./team.html"><i class="bi bi-people"></i> Team</a>
-              </div>
-            </div>
-            <div class="nav-item px-1">
-              <div class="row">
-                <a class="nav-link text-center mx-3" href="./contact.html"><i class="bi bi-envelope"></i> Contact</a>
-              </div>
-            </div>
-            <div class="nav-item px-1 text-center d-flex flex-row float-end">
-              <a class="btn btn-link btn-lg text-light" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/clickclubnitrr/" role="button"
-                data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a>
-              <a class="btn btn-link btn-lg text-light" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/clickclubnitrr/" role="button"
-                data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Navbar  -->
+  <div id="overlay"></div>
+  <div id="mobile-menu" class="mobile-main-menu">
+    <ul>
+      <li class="mobile-only "><a href="./index.html">HOME</a></li>
+      <li class="mobile-only"><a href="./campus.html">CAMPUS</a></li>
+      <li class="mobile-only"><a href="./events.html">EVENTS</a></li>
+      <li class="mobile-only"><a href="./activities.html">ACTIVITIES</a></li>
+      <li class="mobile-only"><a href="./learn_with_click.html">LEARN WITH CLICK</a></li>
+      <li class="mobile-only"><a href="./calendar.html">CALENDAR</a></li>
+      <li class="mobile-only active"><a href="./achievements.html">ACHIEVEMENTS</a></li>
+      <li class="mobile-only"><a href="./team.html">TEAM</a></li>
+      <li class="mobile-only"><a href="./contact.html">CONTACT</a></li>
+      <li class="mobile-only"><a class="" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/clickclubnitrr/" role="button"
+        data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a class="" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/clickclubnitrr/" role="button"
+        data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+  </div>
+  <header class="main-header nav-active" id="navbar">
+    <div class="logo">
+      <a href="./index.html"><img src="static/Click White Logo.webp" alt="Click-Club" /></a>
     </div>
-  </nav>
-  <div class="container-fluid" style="background-color:#1b1413">
-    <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <h1 class="my-3" style="color:#FF6633" >Achievements</h1>
-            
-        </div>
-    </div>
-    <div class="event">
-      <div class="container-fluid" style="background-color:#1b1413" >
-        <img src="media/Achievement/achievemnttrophhy.gif" width="30%">
+    <nav class=" desktop-main-menu">
+      <ul>
+        <li class=""><a href="./index.html">HOME</a></li>
+        <li class=""><a href="./campus.html">CAMPUS</a></li>
+        <li class=""><a href="./events.html">EVENTS</a></li>
+        <li class=""><a href="./activities.html">ACTIVITIES</a></li>
+        <li class=""><a href="./learn_with_click.html">LEARN WITH CLICK</a></li>
+        <li class=""><a href="./calendar.html">CALENDAR</a></li>
+        <li class="active"><a href="./achievements.html">ACHIEVEMENTS</a></li>
+        <li class=""><a href="./team.html">TEAM</a></li>
+        <li class=""><a href="./contact.html">CONTACT</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/clickclubnitrr/" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/clickclubnitrr/" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hamburger Menu -->
+  <button id="menu-btn" class="hamburger" type="button">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+  </button>
+<!-- End Navbar  -->
+
+<div class="container-fluid" style="background-color:#1b1413">
+  <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+          <h1 class="my-3" style="color:#FF6633" >Achievements</h1>
+          <img src="media/Achievement/achievemnttrophhy.gif" width="30%">
+          
       </div>
+  </div>
+  <div class="event">
+  
+  <div class="row mt-4 justify-content-evenly">
 
 
-
-    
-    <h4 class="my-3" style="text-align:center" ></h4>
-    <div class="row mt-4 justify-content-evenly">
-
-
-        <!-- Dubi Ma'am Start -->
-        <div class="col-md-4 on-hover">
-    
-    <div class="card border-0 mb-4 shadow" style="background-color:#22262e">
-                <a href="events/annualworkshop.html"><img class="card-img-top" src= "media/Achievement/dubi_mam_1.jpg" alt="event"></a>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00"> Jan <span class="d-block">20</span>2022</div>
-                <h5 class="font-weight-medium mt-3"  style="text-align:center"><a href="events/annualworkshop.html" class="text-decoration-none link" style="color:white" >Dubi Sao</a></h5>
-                <p class="mt-3 px-2 text-truncate" style="text-align:center">Photo Approved By PhotoVogue Italia</p>
-                <div class="container text-center">
-                  <!--drop down-->
-                  <div id="accordion">
-                    <div class="card">
-                      <div class="card-header"style="background-color:#d05e00;"  id="headingOne">
-                        <h5 class="mb-0" >
-                          <button class="btn btn-link" style="color: #ffffff; text-decoration: none"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                           View Achievement
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                          One of her pictures was approved by PhotoVogue Italia in January 2022. Clicked during her trip to Rajasthan, the picture represents the vibrant market of Jodhpur aptly.
-                        </div>
-                      </div>
-                    </div> 
-                </div>
-              <!--drop down end-->
-              <p class="mt-3 px-2 text-truncate" style="text-align:center"></p> 
-              </div>
-            </div>
-        </div>
-        <!-- Dubi Ma'am End -->
-
-
-        <!-- Nirdesh Sir 2021 Start -->
-        <div class="col-md-4 on-hover">
-          <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-              <a href="events/momentinmoment.html"><img class="card-img-top" src="media/Achievement/ Nirdesh Sharma 40.png" alt="event"></a>
-              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Oct<span class="d-block">18</span>2021</div>
-              <h5 class="font-weight-medium mt-3"style="text-align:center"><a href="events/momentinmoment.html" class="text-decoration-none link"style="color:white" >Nirdesh Sharma</a></h5>
-              <p class="mt-3 px-2 text-truncate"style="text-align:center">Photo Featured In Nat Geographic</p>
+      <!-- Dubi Ma'am Start -->
+      <div class="col-md-4 on-hover">
+  
+      <div class="card border-0 mb-4 shadow" style="background-color:#22262e">
+              <img class="card-img-top" src= "media/Achievement/dubi_mam_1.jpg" alt="event">
+              <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Dubi Sao</h5>
+              <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photo Approved By PhotoVogue Italia</p>
+              <p class="px-2" style="color: #ffffff; text-align:center">20-01-2022</p> 
               <div class="container text-center">
-                  <!--drop down-->
-                  <div id="accordion">
-                    <div class="card" >
-                      <div class="card-header"style="background-color:#d05e00 " id="headingtwo">
-                        <h5 class="mb-0" style="color:#ffffff">
-                          <button class="btn btn-link" style="color: #ffffff; text-decoration: none" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
-                             View Achievement
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapsetwo" class="collapse" aria-labelledby="headingtwo" data-parent="#accordion">
-                        <div class="card-body">
-                          He submitted  3 of his photos in Nat Geographics <b>Your Lens</b> contest from which one photo was selected and featured on Nat Geographic social media platforms.
-                        </div>
-                      </div>
-                    </div> 
-                </div>
-              <!--drop down end-->
-              </div>
-              <p class="mt-3 px-2 text-truncate"style="text-align:center"></p>
+            </div>
           </div>
-         </div> 
-      <!-- Nirdesh Sir 2021 End -->
+      </div>
+      <!-- Dubi Ma'am End -->
 
 
-       <!-- Kishore Sir 2021 Start -->
+      <!-- Nirdesh Sir 2021 Start -->
+      <div class="col-md-4 on-hover">
+        <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+            <img class="card-img-top" src="media/Achievement/ Nirdesh Sharma 40.png" alt="event">
+            <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Nirdesh Sharma</h5>
+            <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photo Featured In Nat Geographic</p>
+            <p class="px-2" style="color: #ffffff; text-align:center">18-10-2022</p>
+        </div>
+       </div> 
+    <!-- Nirdesh Sir 2021 End -->
+
+
+     <!-- Kishore Sir 2021 Start -->
+     <div class="col-md-4 on-hover">
+      <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+          <img class="card-img-top" src="media/Achievement/Kishore Singh.jpg" alt="event">
+          <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Kishore Singh</h5>
+          <p class="mt-3 px-2" style="color: #ffffff; text-align:center">First Position in Scribbled Frames</p>
+          <p class="px-2" style="color: #ffffff; text-align:center">01-01-2021</p>
+      </div>
+     </div> 
+     
+  <!-- Kishore 2021 End -->
+  </div>
+
+
+
+   <div class="row mt-4 justify-content-evenly"> 
+    
+    
+      
+  <!-- Aditya Sir 2019 Start -->
+  <div class="col-md-4 on-hover">
+    <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+        <img class="card-img-top" src="media/Achievement/IMG_7232 - 035 K Adityaraj Chowhan.JPG" alt="event">
+        <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >K Adityaraj Chowhan</h5>
+        <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photo Approved By PhotoVogue Italia</p>
+        <p class="px-2" style="color: #ffffff; text-align:center">04-09-2019</p>
+    </div>
+   </div> 
+<!-- Aditya Sir 2019 End -->
+
+      <!-- Vatsal Sir 2020 Start -->
+      <div class="col-md-4 on-hover">
+        <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+            <img class="card-img-top" src="media/Achievement/cfaf8f10-e470-11e9-aff5-4b569d4eb6f1_large - Vatsal Pandey.jpg">
+            <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Vatsal Pandey</h5>
+            <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photos Approved By PhotoVogue</p>
+            <p class="px-2" style="color: #ffffff; text-align:center">05-09-2020</p>
+        </div>
+       </div> 
+      <!-- Vatsal sir 2020 End -->
+
+
+      <!-- Tushar Sir 2020 Start -->
+      <div class="col-md-4 on-hover">
+        <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+            <img class="card-img-top" src="media/Achievement/Screenshot 2022-06-26 at 12.55.21 PM.png" alt="event">
+            <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Tushar Sahu</h5>
+            <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photos Approved By PhotoVogue</p>
+            <p class="px-2" style="color: #ffffff; text-align:center">14-12-2020</p>
+        </div>
+       </div>
+      <!-- Tushar sir 2020 End -->
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+      
+      <div class="row mt-4 justify-content-evenly"> 
+
+
+
+       <!-- Anas Start -->
        <div class="col-md-4 on-hover">
         <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-            <a href="events/momentinmoment.html"><img class="card-img-top" src="media/Achievement/Kishore Singh.jpg" alt="event"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Jan<span class="d-block">01</span>2021</div>
-            <h5 class="font-weight-medium mt-3" style="text-align:center"><a href="events/momentinmoment.html" class="text-decoration-none link"style="color:white" >Kishore Singh</a></h5>
-            <p class="mt-3 px-2 text-truncate"style="text-align:center">First Position in Scribbled Frames</p>
-            <div class="container text-center">
-               <!--drop down-->
-               <div id="accordion">
-                <div class="card">
-                  <div class="card-header"style="background-color:#d05e00 "  id="headingthree">
-                    <h5 class="mb-0" style="color:#181818">
-                      <button class="btn btn-link "style="color: #fff; text-decoration: none" data-toggle="collapse" data-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
-                         View Achievement
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
-                    <div class="card-body">
-                      <b>Feature in top 15% entries on 35Award- Faces of India</b><br> <b>First position in Scribbled Online Photofest</b><br>The participant of the thematic contest 35AWARDS: National
-                      photography contest: Faces of India. According to the results of the
-                      main voting work "Lady sadhu taking a drag" entered the TOP 15% best
-                      photos of the contest. A total of 638 people from 2 countries and 231
-                      cities took part. In total, 1537 photographs were submitted for the
-                      competition..
-                    </div>
-                  </div>
-                </div> 
-            </div>
-          <!--drop down end-->
-            </div>
-            <p class="mt-3 px-2 text-truncate"style="text-align:center"></p>
+            <img class="card-img-top" src="media/Achievement/Anas_1.jpg" alt="event">
+            <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Abu Anas</h5>
+            <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Photos Approved By PhotoVogue</p>
+            <p class="px-2" style="color: #ffffff; text-align:center">07-02-2022</p>
         </div>
-    </div>
-    <!-- Kishore 2021 End -->
+       </div>
+    <!-- Anas End -->
 
 
 
+      <!-- Shubhangi Ma'am Start -->
+      <div class="col-md-4 on-hover">
+        <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
+            <img class="card-img-top" src="media/Achievement/shubhangi_mam_1.png" alt="event">
+            <h5 class="font-weight-medium mt-3"  style="text-align:center; color:white" >Shubhangi Agrawal</h5>
+            <p class="mt-3 px-2" style="color: #ffffff; text-align:center">Most Influencial Female Photographer</p>
+            <p class="px-2" style="color: #ffffff; text-align:center">03-03-2022</p>
+        </div>
+       </div>
+ <!-- Shubhangi Ma'am End -->
 
-
-    </div>
-
-
-
-
-
-
-    
-       
-       
-        
-     <div class="row mt-4 justify-content-evenly"> 
-      
-      
-        
-    <!-- Aditya Sir 2019 Start -->
-    <div class="col-md-4 on-hover">
-      <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-          <a href="events/momentinmoment.html"><img class="card-img-top" src="media/Achievement/IMG_7232 - 035 K Adityaraj Chowhan.JPG" alt="event"></a>
-          <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Sep<span class="d-block">04</span>2019</div>
-          <h5 class="font-weight-medium mt-3" style="text-align:center" ><a href="events/momentinmoment.html" class="text-decoration-none link" style="color:white" >K Adityaraj Chowhan</a></h5>
-          <p class="mt-3 px-2 text-truncate" style="text-align:center">Photo Approved By PhotoVogue Italia<br> </p>
-          <div class="container text-center">
-               <!--drop down-->
-               <div id="accordion">
-                <div class="card">
-                  <div class="card-header"style="background-color:#d05e00 "  id="headingfour">
-                    <h5 class="mb-0" style="color:#181818">
-                      <button class="btn btn-link "style="color: #fff; text-decoration: none" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                         View Achievement
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
-                    <div class="card-body">
-                     His photo featured in <b>Photo Vogue Italia</b>, It's a landscape picture set in the tea estates of Munnar.
-                    </div>
-                  </div>
-                </div> 
-            </div>
-          <!--drop down end-->
-          </div>
-          <p class="mt-3 px-2 text-truncate" style="text-align:center"></p>
-      </div>
+</div>
   </div>
-  <!-- Aditya Sir 2019 End -->
-  
-        <!-- Vatsal Sir 2020 Start -->
-        <div class="col-md-4 on-hover">
-            <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-                <a href="events/momentinmoment.html"><img class="card-img-top" src="media/Achievement/cfaf8f10-e470-11e9-aff5-4b569d4eb6f1_large - Vatsal Pandey.jpg" alt="event"></a>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Sep<span class="d-block">05</span>2020</div>
-                <h5 class="font-weight-medium mt-3"style="text-align:center"><a href="events/momentinmoment.html" class="text-decoration-none link"style="color:white" >Vatsal Pandey</a></h5>
-                <p class="mt-3 px-2 text-truncate"style="text-align:center">Photos Approved By PhotoVogue</p>
-                <div class="container text-center">
-                     <!--drop down-->
-               <div id="accordion">
-                <div class="card">
-                  <div class="card-header"style="background-color:#d05e00 "  id="headingfive">
-                    <h5 class="mb-0" style="color:#181818">
-                      <button class="btn btn-link "style="color: #fff; text-decoration: none" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                         View Achievement
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
-                    <div class="card-body">
-                      His three photos have been approved by <b>PhotoVogue</b> online<br>He secured third Position (Mobile Category) in a photography competition organised by Raigarh Photography Association.
-                    </div>
-                  </div>
-                </div> 
-            </div>
-          <!--drop down end-->
-          </div>
-          <p class="mt-3 px-2 text-truncate"style="text-align:center"></p> 
-            </div>
-        </div>
-        <!-- Vatsal sir 2020 End -->
-
-
-        <!-- Tushar Sir 2020 Start -->
-        <div class="col-md-4 on-hover">
-            <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-                <a href="events/momentinmoment.html"><img class="card-img-top" src="media/Achievement/Screenshot 2022-06-26 at 12.55.21 PM.png" alt="event"></a>
-                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Dec<span class="d-block">14</span>2020</div>
-                <h5 class="font-weight-medium mt-3"style="text-align:center"><a href="events/momentinmoment.html" class="text-decoration-none link"style="color:white" >Tushar Sahu</a></h5>
-                <p class="mt-3 px-2 text-truncate" style="text-align:center">Photos Approved By PhotoVogue</p>
-                <div class="container text-center">
-                   <!--drop down-->
-               <div id="accordion">
-                <div class="card">
-                  <div class="card-header" style="background-color:#d05e00 " id="headingsix">
-                    <h5 class="mb-0" style="color:#181818">
-                      <button class="btn btn-link "style="color: #fff; text-decoration: none" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                         View Achievement
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordion">
-                    <div class="card-body">
-                      His 10 photos were approved by <b>PhotoVogue</b> under different genre
-                    </div>
-                  </div>
-                </div> 
-            </div>
-          <!--drop down end-->
-          </div>
-          <p class="mt-3 px-2 text-truncate"style="text-align:center"></p> 
-            </div>
-        </div>
-        <!-- Tushar sir 2020 End -->
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-        
-        <div class="row mt-4 justify-content-evenly"> 
-
-
-
-         <!-- Anas Start -->
-         <div class="col-md-4 on-hover">
-          <div class="card border-0 mb-4 shadow"style="background-color:#22262e">
-              <a href="calendar.html"><img class="card-img-top" src="media/Achievement/Anas_1.jpg" alt="event"></a>
-              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00">Feb<span class="d-block">07</span>2022</div>
-              <h5 class="font-weight-medium mt-3" style="text-align:center"><a href="calendar.html" class="text-decoration-none link" style="color:white" >Abu Anas</a></h5>
-              <p class="mt-3"style="text-align:center">PhotoVogue Approved Photos</p>
-              <div class="container text-center">
-              <!--drop down-->
-              <div id="accordion">
-                <div class="card">
-                  <div class="card-header"style="background-color:#d05e00 "  id="headingseven">
-                    <h5 class="mb-0" style="color:#181818">
-                      <button class="btn btn-link "style="color: #fff; text-decoration: none" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                         View Achievement
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordion">
-                    <div class="card-body">
-                      His first photo "Livelihood" has been approved by PhotoVogue: Vogue.
-                    </div>
-                  </div>
-                </div> 
-            </div>
-          <!--drop down end-->
-          </div>
-          <p class="mt-3 px-2 text-truncate"style="text-align:center"></p> 
-          </div>
-      </div>
-      <!-- Anas End -->
-
-
-
-        <!-- Shubhangi Ma'am Start -->
-     <div class="col-md-4 on-hover">
-      <div class="card border-0 mb-4  shadow"style="background-color:#22262e">
-          <img class="card-img-top" src="media/Achievement/shubhangi_mam_1.png" alt="event"></a>
-          <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute" style="background:#d05e00" >March<span class="d-block">03</span>2022</div>
-          <h5 class="font-weight-medium mt-3" style="text-align:center"><a href="events/momentinmoment.html" class="text-decoration-none link" style="color:white" >Shubhangi Agrawal</a></h5>
-          <p class="mt-3 px-2 text-truncate" style="text-align:center">Most Influencial Female Photographer</p>
-          <div class="container text-center">
-          
-     <!--drop down-->
-     <div id="accordion">
-      <div class="card">
-        <div class="card-header"style="background-color:#d05e00 "  id="heading8">
-          <h5 class="mb-0" style="color:#181818">
-            <button class="btn btn-link " style="color: white; text-decoration: none" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-               View Achievement
-            </button>
-          </h5>
-        </div>
-    
-        <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
-          <div class="card-body">
-            Conferred as one of the seven photographers globally in the article titled ‘Behind the lens of the upcoming generation of female photographers from all over the world under the age of 25’ which was published along with a small interview and some photos clicked by her in Assembly, a magazine by Pakistani activist and Nobel laureate, Malala Yousufzai (2018). The picture clicked by me was also shared on their official Instagram account.<br><br>
-            Won the second prize in the overall category and third prize in the architecture category in the annual online photography competition conducted by MNIT Jaipur (2019).<br><br>
-            Six of my photographs have been approved by Photovogue, VogueItalia under the fashion and fine art category. <br><br>
-            ‘Solace’, a moody portrait series  was displayed in OnlyChild magazine's first Virtual Reality Exhibition (2020)<br><br>
-            ‘Sughar’, a talent and event management company interviewed me on the topic of female photographers to encourage young women who want to enter the photography industry and featured it on their Instagram account.<br><br>
-            Eatmynews’, a media platform, featured my interview as a fashion photographer.<br><br>
-            FO2, India's exclusive online photography store, as a part of their community initiative to celebrate most influential female photographers in the industry, shared my story on their blog and across their various social media handles.<br><br>
-          </div>
-        </div>
-      </div> 
-  </div>
-<!--drop down end-->
-</div>
-<p class="mt-3 px-2 text-truncate"style="text-align:center"></p>  
-      </div>
-  </div>
-
-   <!-- Shubhangi Ma'am End -->
-
-</div>
-    </div>
 </div>
 </div>
+
+ 
   <footer id="footer" class="mt-3">
     <div class="footer-top py-3" style="background-color: #181818; color:#B8B8B8; font-size:14px;">
       <div class="container">
@@ -478,4 +261,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/base.js"></script>
+  <script src="js/achievement.js"></script>
   </html>
