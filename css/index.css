@@ -401,3 +401,8 @@ a,h1,h2,h3,h4,h5{
           max-width: 100%;
         }
       }
+
+
+.desc{
+  font-size: min(4vw,22px);
+}
