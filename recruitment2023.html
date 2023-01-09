@@ -98,52 +98,69 @@ var countdownfunction = setInterval(function() {
           max-height: 500px;
       }
   </style>
+  <style>
+    .title::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 5px;
+        background: #FF6633;
+        bottom: 0;
+        left: calc(50% - 25px);
+    }
+    .countdown{
+      font-size: max(20px,2vw);
+    }
+</style>
+<script>
+  var countDownDate = new Date("Jan 31, 2023 23:59:59").getTime();
+var countdownfunction = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
 
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  <div class="py-3">
-    <div class="container">
-        <div class="row justify-content-center">
-            <style>
-                .title::after {
-                    content: "";
-                    position: relative;
-                    display: block;
-                    width: 60px;
-                    height: 5px;
-                    background: #FF6633;
-                    bottom: 0;
-                    left: calc(50% - 25px);
-                }
-            </style>
-            <div class="title col-md-8 text-center">
-                <h3 class="my-3" style="font-family:Poppins"><b>Click Club Recruitment 2023</b></h3>
-            </div>
-        </div>
-    </div>
-  </div>
+// document.getElementById("clock-b").innerHTML =
+// "<div class='col'>"+hours+"<br><p>Hrs</p></div><div class='col'>"+minutes+"<br><p>Mins</p></div><div class='col'>"+seconds+"<br><p>Sec</p></div>";
 
-  <div class="">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4 text-center">
-                <img class="card-img-top" src="./media/Recruitment2022.jpeg"alt="event">
-            </div>
-        </div>
-    </div>
-  </div>
+  document.getElementById("clock-b").innerHTML =
+  "<div class='col mx-1'><span class='countdown'>"+days+"</span><br><p>Days</p></div><div class='col mx-1'><span class='countdown'>"+hours+"</span><br><p>Hours</p></div><div class='col mx-1'><span class='countdown'>"+minutes+"</span><br><p>Minutes</p></div><div class='col mx-1'><span class='countdown'>"+seconds+"</span><br><p>Seconds</p></div>";
+
+if (distance < 0) {
+  document.getElementById("clock-b").innerHTML = "Unfortunately, registrations have been closed.";
+}
+}, 1000);
+</script>
 
   <div class="py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <p> Join ClickClub, NITRR's trendiest club, where you can be a part of the documentation, management, and tech domain.
-                    <br><br>
-                    Lose the tension and start shooting people 📸.  
-                    <br><br>
-
-                    Fill the form to register : </p><a style="color:blue; text-decoration: underline;" href="https://forms.gle/CEoANjcgjcNqioRa6" target="_blank" rel="noopener noreferrer"><p>https://forms.gle/CEoANjcgjcNqioRa6<p></a>          
-                
+            <div class="col-lg-4 text-center">
+                <img class="card-img-top" src="./media/Recruitment2023.jpeg" style="object-fit: contain;" alt="event">
             </div>
+            <div class="col-lg-8 py-3 text-center">
+              <h3 class="title my-3" style="font-family:Poppins"><b>Click Club Recruitment 2023</b></h3>
+              <p class="py-2"> Join ClickClub, NITRR's trendiest club, where you can be a part of the documentation, management, and tech domain.
+                  <br><br>
+                  Lose the tension and start shooting people 📸.  
+                  <br><br>
+
+                  Click here to register : </p>
+                  
+              <a class="btn btn-primary" style="font-family:Poppins; background-color: #FF6633;border-color: #ffffff;" href="https://forms.gle/CEoANjcgjcNqioRa6" target="_blank" rel="noopener noreferrer" role="button">Register</a>
+              <div class="container py-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-6 py-3 text-center">
+                    <h5 style="font-family:Poppins; font-weight: bold;">Registration closes in</h5>
+                    <div id="clock-b" class="countdown-circles py-1 d-flex flex-wrap justify-content-center" style="color:#000"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
     </div>
   </div>
