@@ -19,29 +19,6 @@
 
   <title>Recruitment | Click Club</title>
 </head>
-<script>
-    var countDownDate = new Date("Nov 2, 2022 9:00:00").getTime();
-var countdownfunction = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  document.getElementById("clock-b").innerHTML =
-  "<div class='col'>"+hours+"<br><p>Hrs</p></div><div class='col'>"+minutes+"<br><p>Mins</p></div><div class='col'>"+seconds+"<br><p>Sec</p></div>";
-  
-//   document.getElementById("clock-b").innerHTML =
-//   "<div class='col'>"+days+"<br><p>Days</p></div><div class='col'>"+hours+"<br><p>Hrs</p></div><div class='col'>"+minutes+"<br><p>Min</p></div><div class='col'>"+seconds+"<br><p>Sec</p></div>";
-  
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("clock-b").innerHTML = "LAUNCHED";
-  }
-}, 1000);
-</script>
 <body style="background-color:#f7f7f7">
     <!-- Navbar  -->
   <div id="overlay"></div>
