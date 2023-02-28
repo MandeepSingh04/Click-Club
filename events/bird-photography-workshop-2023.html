@@ -17,8 +17,9 @@
   <link rel="stylesheet" href="../css/base.css">
 
   <title>Events | Click Club</title>
+
 </head>
-<body style="background-color:#f7f7f7">
+<body style="background-color:#f7f7f7" oncontextmenu="return false">
     <!-- Navbar  -->
   <div id="overlay"></div>
   <div id="mobile-menu" class="mobile-main-menu">
@@ -68,8 +69,9 @@
     <span class="hamburger-bottom"></span>
   </button>
 <!-- End Navbar  -->
+
 <script>
-    var countDownDate = new Date("Jan 20, 2023 21:00:00").getTime();
+    var countDownDate = new Date("Mar 3, 2023 23:59:59").getTime();
   var countdownfunction = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -86,7 +88,7 @@
     "<div class='col mx-1'><span class='countdown'>"+days+"</span><br><p>Days</p></div><div class='col mx-1'><span class='countdown'>"+hours+"</span><br><p>Hours</p></div><div class='col mx-1'><span class='countdown'>"+minutes+"</span><br><p>Minutes</p></div><div class='col mx-1'><span class='countdown'>"+seconds+"</span><br><p>Seconds</p></div>";
   
   if (distance < 0) {
-    document.getElementById("clock-b").innerHTML = "Unfortunately, registrations have been closed.";
+    document.getElementById("clock-c").innerHTML = "<strong>Unfortunately, registrations have been closed.</strong>";
   }
   }, 1000);
   </script>
@@ -115,11 +117,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
-                <p> Hola amigos !!!
-                    Are you tired of your normal boring college life? Want to feel productive and grab some skills. 
-                    So, Click club is back with a wonderful opportunity to pick up new photography skills and fine tune those you already have.
-                    Photography is an art as well as science. That’s why this Workshop delves into both. It starts with the basics, addresses the advanced, and polishes the nuances.
-                    Get ready for our Bird Photography Workshop by Nitish Agarwal!!  
+                <p> “Getting up early and watching the sunrise 🌅 to see if the birds 🦢 have stunning poses to photograph, is the best way to make your day cheerful!!”
+                    <br><br>
+                    Hola amigos,
+                    Click Club 📸 is back again with a wonderful photography workshop on Bird Photography.
+                    This workshop will make you understand the basic approach and concepts of bird photography. 
+                    <br><br>
+                    It will be a valuable session for the all the photography enthusiasts who want to explore this genre of photography and learn from the experience of our guest speaker, Nitish Agrawal.
+                 
                 </p>
             </div>
         </div>
@@ -132,7 +137,7 @@
                 <p><strong><i class="fa fa-calendar"></i> Date: </strong>4th March, 2023</p>
             </div>
             <div class="col-md-4 text-center">
-                <p><strong><i class="fa fa-clock"></i> Timing: </strong>10:00 AM IST onwards</p>
+                <p><strong><i class="fa fa-clock"></i> Timing: </strong>5:00 PM IST</p>
             </div>
             <div class="col-md-4 text-center">
                 <p><strong><i class="fa fa-location"></i> Venue :</strong> S-11, Main Building, NIT Raipur</p>
@@ -147,9 +152,30 @@
             <div class="col-lg-4 text-center">
                 <img class="card-img-top" src="../media/events/bird-photography-workshop-2023.jpeg" style="object-fit: contain;" alt="event">
             </div>
+            <div class="col-lg-8 py-3 text-center">
+                <h5 style="font-family:Poppins; font-weight: bold; padding-top: 5%;">Guest Speaker - Nitish Agrawal</h5>
+              <p class="">
+                <br>
+                (Alumni NITRR, Ex-member of Click Club)<br><br>
+                He is a professional bird photographer and the speaker for our workshop.<br><br>
+                He would be sharing his experience in this field and his journey.<br><br>
+                Click here to register : </p>
+                  
+              <a class="btn btn-primary" style="font-family:Poppins; background-color: #FF6633;border-color: #ffffff;" href="https://docs.google.com/forms/d/e/1FAIpQLSdrIcadVoIGh-s9I8IiKi_Yy9mgbUrDDh1AaPgi5Ic4XTlXxA/viewform" target="_blank" rel="noopener noreferrer" role="button">Register</a>
+              <div class="container py-3">
+                <div class="row justify-content-center">
+                  <div id="clock-c" class="col-md-6 py-3 text-center">
+                    <h5 style="font-family:Poppins; font-weight: bold;">Registration closes in</h5>
+                    <div id="clock-b" class="countdown-circles py-1 d-flex flex-wrap justify-content-center" style="color:#000"></div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
         </div>
     </div>
   </div>
+<script async src="https://api.countapi.xyz/hit/clickclub.nitrr.ac.ineventsbird-photography-workshop-2/visits"></script>
 
   <footer id="footer" class="mt-3">
     <div class="footer-top py-3" style="background-color: #181818; color:#B8B8B8; font-size:14px;">
